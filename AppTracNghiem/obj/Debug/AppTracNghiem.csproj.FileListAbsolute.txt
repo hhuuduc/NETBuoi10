@@ -1,0 +1,9 @@
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\bin\Debug\AppTracNghiem.exe.config
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\bin\Debug\AppTracNghiem.exe
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\bin\Debug\AppTracNghiem.pdb
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\obj\Debug\AppTracNghiem.csprojResolveAssemblyReference.cache
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\obj\Debug\AppTracNghiem.Form1.resources
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\obj\Debug\AppTracNghiem.Properties.Resources.resources
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\obj\Debug\AppTracNghiem.csproj.GenerateResource.Cache
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\obj\Debug\AppTracNghiem.exe
+E:\LuuDuLieuSinhVien\2001207422_HuynhHuuDuc\NETBuoi10\AppTracNghiem\obj\Debug\AppTracNghiem.pdb
