@@ -8,6 +8,7 @@ namespace AppTracNghiem
 {
     class CauHoi
     {
+        public int STT { get; set; }
         public string CauHoiText { get; set; }
         public string DapAnA { get; set; }
         public string DapAnB { get; set; }
@@ -16,8 +17,10 @@ namespace AppTracNghiem
         public string DapAnDung { get; set; }
         public string DapAnChon { get; set;}
 
-        public CauHoi(string ch, string a, string b, string c, string d, string da)
+        public CauHoi() { }
+        public CauHoi(int stt, string ch, string a, string b, string c, string d, string da)
         {
+            this.STT = stt;
             this.CauHoiText = ch;
             this.DapAnA = a;
             this.DapAnB = b;

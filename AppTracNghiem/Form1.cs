@@ -7,21 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace AppTracNghiem
 {
     public partial class Form1 : Form
     {
+        public string conStr = "Data Source=A209PC39;Initial Catalog=TN;Integrated Security=True";
 
         List<CauHoi> dsch = new List<CauHoi>();
         public int sch = 0;
 
         public Form1()
         {
-            dsch.Add(new CauHoi("1 + 1 = ?", "2", "3", "4", "5", "A"));
-            dsch.Add(new CauHoi("1 + 2 = ?", "2", "3", "4", "5", "B"));
-            dsch.Add(new CauHoi("1 + 3 = ?", "2", "3", "4", "5", "C"));
-            dsch.Add(new CauHoi("1 + 4 = ?", "2", "3", "4", "5", "D"));
+            SqlConnection conn = new SqlConnection(conStr);
+            string sql = "select * from CAUHOIS";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+
+            conn.Open();
+            SqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                int STT = Convert.ToInt32(rdr.GetValue(0).ToString());
+                string CauHoiText = rdr.GetValue(1).ToString();
+                string DapAnA = rdr.GetValue(2).ToString();
+                string DapAnB = rdr.GetValue(3).ToString();
+                string DapAnC = rdr.GetValue(4).ToString();
+                string DapAnD = rdr.GetValue(5).ToString();
+                string DapAnDung = rdr.GetValue(6).ToString();
+                dsch.Add(new CauHoi(STT, CauHoiText, DapAnA, DapAnB, DapAnC, DapAnD, DapAnDung));
+            }
            
             InitializeComponent();
             ShowCauHoi();
@@ -121,7 +137,7 @@ namespace AppTracNghiem
             {
                 
                 CauHoi ch = dsch[i];
-                if (String.Compare(ch.DapAnChon, ch.DapAnDung, false) == 0)
+                if (String.Compare(ch.DapAnChon, ch.DapAnDung, true) == 0)
                     soCauDung++;
             }
             string text = "Đúng " + soCauDung + "/" + dsch.Count;
